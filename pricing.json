@@ -1,0 +1,44 @@
+[
+  {
+    "productId": "trello-basic",
+    "currency": "USD",
+    "tiers": [
+      {
+        "range": {
+          "from": 1,
+          "to": 5
+        },
+        "price": 5000,
+        "priceModel": "FLAT"
+      },
+      {
+        "range": {
+          "from": 6
+        },
+        "price": 500,
+        "priceModel": "VOLUME"
+      }
+    ]
+  },
+  {
+    "productId": "trello-standard",
+    "currency": "USD",
+    "tiers": [
+      {
+        "range": {
+          "from": 1,
+          "to": 5
+        },
+        "price": 1000,
+        "priceModel": "GRADUATED"
+      },
+      {
+        "range": {
+          "from": 6
+        },
+        "price": 500,
+        "priceModel": "GRADUATED"
+      }
+    ]
+  }
+]
