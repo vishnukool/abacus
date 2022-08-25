@@ -26,12 +26,4 @@ public class QuantityRange {
         this.to = to;
     }
 
-    public int getPriceableQuantity(int quantity) {
-        if (to == null) {
-            return quantity;
-        } else {
-            return Math.min((to - from + 1), quantity);
-        }
-    }
-
 }

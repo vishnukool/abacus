@@ -8,9 +8,17 @@ public class GraduatedProcessor implements IPriceModelProcessor {
 
     public PricingTierResponse process(Tier tier, int quantity) {
         QuantityRange range = tier.getRange();
-        int priceableQuantity = range.getPriceableQuantity(quantity);
+        int priceableQuantity = getPriceableQuantity(range, quantity);
         return new PricingTierResponse(quantity - priceableQuantity,
                 priceableQuantity * tier.getPrice());
+    }
+
+    public int getPriceableQuantity(QuantityRange range, int quantity) {
+        if (range.getTo() == null) {
+            return quantity;
+        } else {
+            return Math.min((range.getTo() - range.getFrom() + 1), quantity);
+        }
     }
 
 }

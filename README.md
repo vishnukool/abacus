@@ -1,7 +1,7 @@
 ## How to run
 
 1. Build Gradle `./gradlew build`
-2. Run Tester `./gradlew run`
+2. Run main `./gradlew run`
 
 ## To run tests
 1. `./gradlew test`

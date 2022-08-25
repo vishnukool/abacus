@@ -8,8 +8,9 @@ public class VolumeProcessor implements IPriceModelProcessor {
 
     public PricingTierResponse process(Tier tier, int quantity) {
         QuantityRange range = tier.getRange();
-        int priceableQuantity = range.getPriceableQuantity(quantity);
-        return new PricingTierResponse(quantity - priceableQuantity,
-                priceableQuantity * tier.getPrice());
+        if (quantity >= range.getFrom() && (range.getTo() == null || quantity <= range.getTo())) {
+            return new PricingTierResponse(0, quantity * tier.getPrice());
+        }
+        return new PricingTierResponse(quantity, 0);
     }
 }

@@ -14,9 +14,9 @@ class PricingCalculatorTest {
         assertEquals(0, pc.getMonthlyCost("trello-basic", 0));
         assertEquals(5000, pc.getMonthlyCost("trello-basic", 1));
         assertEquals(5000, pc.getMonthlyCost("trello-basic", 5));
-        assertEquals(5500, pc.getMonthlyCost("trello-basic", 6));
-        assertEquals(7500, pc.getMonthlyCost("trello-basic", 10));
-        assertEquals(10000, pc.getMonthlyCost("trello-basic", 15));
+        assertEquals(3000, pc.getMonthlyCost("trello-basic", 6));
+        assertEquals(5000, pc.getMonthlyCost("trello-basic", 10));
+        assertEquals(7500, pc.getMonthlyCost("trello-basic", 15));
     }
 
     @Test
